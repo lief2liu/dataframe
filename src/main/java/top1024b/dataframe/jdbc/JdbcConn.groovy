@@ -23,7 +23,7 @@ class JdbcConn implements Serializable {
 
     JdbcConn() {}
 
-    JdbcConn(driver, url, user, password) {
+    JdbcConn(String driver, String url, String user, String password) {
         this.driver = driver
         this.url = url
         this.user = user

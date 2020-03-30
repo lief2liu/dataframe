@@ -22,7 +22,7 @@ class DataFrame implements Serializable {
      * replace：if the row already exists , delete the old row and insert the new row
      */
     enum SaveMode {
-        INSERT, IGNORE, UPSERT, REPLACE
+        INSERT, IGNORE, UPSERT, REPLACE, OVERRIDE
     }
 
     private DataFrame(List<Map<String, Object>> rows, Map<String, Object> ext) {
@@ -83,7 +83,7 @@ class DataFrame implements Serializable {
         res
     }
 
-    DataFrame SaveMode(SaveMode saveMode) {
+    DataFrame setSaveMode(SaveMode saveMode) {
         this.saveMode = saveMode
 
         this

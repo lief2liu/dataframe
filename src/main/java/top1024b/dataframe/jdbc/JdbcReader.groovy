@@ -10,7 +10,7 @@ import top1024b.dataframe.common.DataFrameReader
 import top1024b.dataframe.common.Page
 
 /**
- * implements DataFrameReader to write rows to jdbc
+ * implements DataFrameReader to read rows from jdbc
  */
 @CompileStatic
 class JdbcReader implements DataFrameReader, Serializable {

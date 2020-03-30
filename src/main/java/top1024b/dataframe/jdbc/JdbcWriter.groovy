@@ -113,7 +113,7 @@ class JdbcWriter implements DataFrameWriter, Serializable {
                     "insert into $tb($field) values $why on duplicate key update $update".toString()
                 })
             default:
-                throw new IllegalArgumentException("save mode can only be : insert ignore upsert replace")
+                throw new IllegalArgumentException("unsupported save mode ${df.getSaveMode()},save mode can only be : insert/ignore/upsert/replace")
         }
     }
 
