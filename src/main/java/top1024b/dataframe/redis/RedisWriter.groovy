@@ -1,15 +1,11 @@
 package top1024b.dataframe.redis
 
-
 import groovy.transform.CompileStatic
 import redis.clients.jedis.Jedis
 import redis.clients.jedis.JedisPool
 import redis.clients.jedis.Pipeline
 import top1024b.dataframe.common.DataFrame
 import top1024b.dataframe.common.DataFrameWriter
-
-import java.util.function.BiFunction
-import java.util.function.Function
 
 @CompileStatic
 class RedisWriter implements DataFrameWriter, Serializable {

@@ -18,9 +18,7 @@ class JdbcWriterTest implements Serializable {
         }
         DataFrame df = DataFrame.read(rows, null)
 
-        String jdbcUrl = "jdbc:mysql://192.168.1.13:3306/test" +
-                "?allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false" +
-                "&useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=utf8"
+        String jdbcUrl = Common.jdbcUrl
 
         new JdbcWriterTest().testConn(df, jdbcUrl)
         new JdbcWriterTest().testTemplate(df, jdbcUrl)

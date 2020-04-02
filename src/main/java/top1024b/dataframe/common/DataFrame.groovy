@@ -100,8 +100,12 @@ class DataFrame implements Serializable {
         show(15)
     }
 
+    Set<String> getColumnNames(){
+        return rows.get(0).keySet()
+    }
+
     void show(int width) {
-        Set<String> cols = rows.get(0).keySet()
+        Set<String> cols = getColumnNames()
 
         String delimiter = ""
         width.times {

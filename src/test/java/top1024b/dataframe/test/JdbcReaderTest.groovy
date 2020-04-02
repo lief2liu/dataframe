@@ -12,9 +12,7 @@ import top1024b.dataframe.jdbc.JdbcReader
 @CompileStatic
 class JdbcReaderTest implements Serializable {
     static void main(String[] args) {
-        String jdbcUrl = "jdbc:mysql://192.168.1.13:3306/test" +
-                "?allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false" +
-                "&useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=utf8"
+        String jdbcUrl = Common.jdbcUrl
 
         new JdbcReaderTest().testConn(jdbcUrl)
         new JdbcReaderTest().testTemplate(jdbcUrl)
